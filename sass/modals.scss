@@ -8,44 +8,129 @@
 
 // Base
 // ----
-.bacon {
-  background-color: $bacon-base-bg;
-  border: 1px solid $bacon-base-border;
-  border-radius: $bacon-border-radius;
-  color: $bacon-base-text;
-  padding: $bacon-padding-y $bacon-padding-x;
-  margin-bottom: $bacon-margin-y;
+.modal {
+  background: $modal-bg;
+  border: 1px solid $modal-border;
+  border-radius: $modal-border-radius;
+  @if $modal-box-shadow {
+    box-shadow: $modal-box-shadow;
+  }
+  max-width: $modal-md-width;
+  margin: 0 auto;
+  position: relative;
+  z-index: $modal-z-index;
+}
+
+// Sizes
+.modal-xs { max-width: $modal-xs-width; }
+.modal-sm { max-width: $modal-sm-width; }
+.modal-lg { max-width: $modal-lg-width; }
+.modal-xl { max-width: $modal-xl-width; }
+
+
+// Header
+// ------
+.modal-header {
+  @include clearfix;
+  border-bottom: 1px solid $modal-header-border;
+  border-top-left-radius: $modal-border-radius;
+  border-top-right-radius: $modal-border-radius;
+  padding: $modal-header-padding-y $modal-header-padding-x;
+}
+
+@include mq($min: $screen-sm-min) {
+  .modal-header {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.modal-header-actions {
+  display: inline-block;
+  margin-right: -100%;
+  text-align: right;
+  width: 100%;
+}
+
+.modal-title {
+  display: inline-block;
+  font-size: $font-size-h4;
+  margin: 0;
+  vertical-align: middle; // line up with .btns
+
+  > a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+
+// Body
+// ----
+.modal-body {
+  padding: $modal-body-padding-y $modal-body-padding-x;
+}
+
+
+// Footer
+// ------
+.modal-footer {
+  @include clearfix;
+  border-top: 1px solid $modal-footer-border;
+  border-bottom-left-radius: $modal-border-radius;
+  border-bottom-right-radius: $modal-border-radius;
+  padding: $modal-footer-padding-y $modal-footer-padding-x;
+}
+
+.modal-footer-actions {
+  @extend .modal-header-actions;
 }
 
 
 // States
 // ------
 // Primary
-.bacon-primary {
-  @include make-bacon($bg: $bacon-primary-bg, $border: $bacon-primary-border, $text: $bacon-primary-text);
+.modal-primary {
+  @include make-modal($bg: $modal-primary-bg, $border: $modal-primary-border, $text: $modal-primary-text);
 }
 
 // Secondary
-.bacon-secondary {
-  @include make-bacon($bg: $bacon-secondary-bg, $border: $bacon-secondary-border, $text: $bacon-secondary-text);
+.modal-secondary {
+  @include make-modal($bg: $modal-secondary-bg, $border: $modal-secondary-border, $text: $modal-secondary-text);
 }
 
 // Error
-.bacon-error {
-  @include make-bacon($bg: $bacon-error-bg, $border: $bacon-error-border, $text: $bacon-error-text);
+.modal-error {
+  @include make-modal($bg: $modal-error-bg, $border: $modal-error-border, $text: $modal-error-text);
 }
 
 // Warning
-.bacon-warning {
-  @include make-bacon($bg: $bacon-warning-bg, $border: $bacon-warning-border, $text: $bacon-warning-text);
+.modal-warning {
+  @include make-modal($bg: $modal-warning-bg, $border: $modal-warning-border, $text: $modal-warning-text);
 }
 
 // Success
-.bacon-success {
-  @include make-bacon($bg: $bacon-success-bg, $border: $bacon-success-border, $text: $bacon-success-text);
+.modal-success {
+  @include make-modal($bg: $modal-success-bg, $border: $modal-success-border, $text: $modal-success-text);
 }
 
 // Info
-.bacon-info {
-  @include make-bacon($bg: $bacon-info-bg, $border: $bacon-info-border, $text: $bacon-info-text);
+.modal-info {
+  @include make-modal($bg: $modal-info-bg, $border: $modal-info-border, $text: $modal-info-text);
+}
+
+
+// Overlay
+// -------
+.modal-overlay {
+  @if $modal-overlay-bg-fallback != $modal-overlay-bg {
+    background: $modal-overlay-bg-fallback;
+  }
+  background: $modal-overlay-bg;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $modal-overlay-z-index;
 }
