@@ -2,71 +2,74 @@
 // https://github.com/lintelio/lintel/blob/master/CONTRIBUTING.md
 
 // Global
-$modal-padding-y:         floor($cushion-x-lg * .6)  !default;
-$modal-padding-x:         $cushion-x-lg !default;
+$modal-padding-y:           floor($cushion-x-lg * .6)  !default;
+$modal-padding-x:           $cushion-x-lg !default;
 
-$modal-bg:                #fff !default;
-$modal-border:            rgba(0,0,0,.6) !default;
-$modal-border-radius:     $border-radius-base !default;
-$modal-box-shadow:        $box-shadow-dark !default;
-$modal-z-index:           $z-index-3xl !default;
+$modal-bg:                  #fff !default;
+$modal-border:              rgba(0,0,0,.6) !default;
+$modal-border-radius:       $border-radius-base !default;
+$modal-box-shadow:          $box-shadow-dark !default;
+$modal-z-index:             $z-index-3xl !default;
+
+$modal-center-y:            true !default;
 
 // Header
-$modal-header-padding-y:  $modal-padding-y !default;
-$modal-header-padding-x:  $modal-padding-x !default;
+$modal-header-padding-y:    $modal-padding-y !default;
+$modal-header-padding-x:    $modal-padding-x !default;
 
-$modal-header-border:     $border-base !default;
+$modal-header-border:       $border-base !default;
 
 // Body
-$modal-body-padding-y:    $modal-padding-y !default;
-$modal-body-padding-x:    $modal-padding-x !default;
+$modal-body-padding-y:      $modal-padding-y !default;
+$modal-body-padding-x:      $modal-padding-x !default;
 
 // Footer
-$modal-footer-padding-y:  $modal-padding-y !default;
-$modal-footer-padding-x:  $modal-padding-x !default;
+$modal-footer-padding-y:    $modal-padding-y !default;
+$modal-footer-padding-x:    $modal-padding-x !default;
 
-$modal-footer-border:     $modal-header-border !default;
+$modal-footer-border:       $modal-header-border !default;
 
 // Sizes
-$modal-xs-width:          400px;
-$modal-sm-width:          500px;
-$modal-md-width:          600px;
-$modal-lg-width:          700px;
-$modal-xl-width:          800px;
+$modal-xs-width:            400px !default;
+$modal-sm-width:            500px !default;
+$modal-md-width:            600px !default;
+$modal-lg-width:            700px !default;
+$modal-xl-width:            800px !default;
 
 // Overlay
-$modal-overlay-bg:        rgba(0,0,0,.5) !default;
-$modal-overlay-bg-fallback:#333 !default;
-$modal-overlay-z-index:   $modal-z-index - 100 !default;
+$modal-overlay-bg:          rgba(0,0,0,.5) !default;
+$modal-overlay-bg-fallback: #333 !default;
+$modal-overlay-padding-y:   $cushion-base !default;
+$modal-overlay-padding-x:   $modal-overlay-padding-y !default;
 
 // States
 // ------
 // Primary
-$modal-primary-bg:        null !default;
-$modal-primary-border:    null !default;
-$modal-primary-text:      $state-primary-text !default;
+$modal-primary-bg:          null !default;
+$modal-primary-border:      null !default;
+$modal-primary-text:        $state-primary-text !default;
 
 // Secondary
-$modal-secondary-bg:      null !default;
-$modal-secondary-border:  null !default;
-$modal-secondary-text:    $state-secondary-text !default;
+$modal-secondary-bg:        null !default;
+$modal-secondary-border:    null !default;
+$modal-secondary-text:      $state-secondary-text !default;
 
 // Error
-$modal-error-bg:          null !default;
-$modal-error-border:      null !default;
-$modal-error-text:        $state-error-text !default;
+$modal-error-bg:            null !default;
+$modal-error-border:        null !default;
+$modal-error-text:          $state-error-text !default;
 
 // Warning
-$modal-warning-bg:        null !default;
-$modal-warning-border:    null !default;
-$modal-warning-text:      $state-warning-text !default;
+$modal-warning-bg:          null !default;
+$modal-warning-border:      null !default;
+$modal-warning-text:        $state-warning-text !default;
 
 // Success
-$modal-success-bg:        null !default;
-$modal-success-border:    null !default;
-$modal-success-text:      $state-success-text !default;
+$modal-success-bg:          null !default;
+$modal-success-border:      null !default;
+$modal-success-text:        $state-success-text !default;
 
 // Info
-$modal-info-bg:           null !default;
-$modal-info-border:       null !default;
-$modal-info-text:         $state-info-text !default;
+$modal-info-bg:             null !default;
+$modal-info-border:         null !default;
+$modal-info-text:           $state-info-text !default;

@@ -1,7 +1,7 @@
 // Please try to maintain the same code style as outlined here:
 // https://github.com/lintelio/lintel/blob/master/CONTRIBUTING.md
 
-@mixin make-modal($bg, $border, $text) {
+@mixin modal-state($bg, $border, $text) {
   .modal-header {
     @if $bg     { background-color: $bg; }
     @if $border { border-color: $border; }

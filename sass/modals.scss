@@ -5,6 +5,44 @@
 @import 'modals-functions';
 @import 'modals-mixins';
 
+// Overlay
+// -------
+.modal-overlay {
+  @if $modal-overlay-bg-fallback != $modal-overlay-bg {
+    background: $modal-overlay-bg-fallback;
+  }
+  background: $modal-overlay-bg;
+  padding: $modal-overlay-padding-y $modal-overlay-padding-x;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $modal-z-index;
+}
+
+
+// Center if browser supports flexbox (and user uses modernizr)
+// ------------------------------------------------------------
+@if $modal-center-y == true {
+  body.flexbox {
+    .modal-overlay {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.modal-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 100%;
+  max-width: $modal-md-width;
+  width: 100%;
+}
+
 
 // Base
 // ----
@@ -15,17 +53,31 @@
   @if $modal-box-shadow {
     box-shadow: $modal-box-shadow;
   }
-  max-width: $modal-md-width;
-  margin: 0 auto;
   position: relative;
-  z-index: $modal-z-index;
 }
 
 // Sizes
-.modal-xs { max-width: $modal-xs-width; }
-.modal-sm { max-width: $modal-sm-width; }
-.modal-lg { max-width: $modal-lg-width; }
-.modal-xl { max-width: $modal-xl-width; }
+.modal-xs  { max-width: $modal-xs-width; }
+.modal-sm  { max-width: $modal-sm-width; }
+.modal-lg  { max-width: $modal-lg-width; }
+.modal-xl  { max-width: $modal-xl-width; }
+.modal-max { max-width: none; }
+
+.modal-full {
+  display: flex;
+  overflow-y: auto;
+  padding: $modal-overlay-padding-y $modal-overlay-padding-x;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  > .modal {
+    min-height: 100%;
+    width: 100%;
+  }
+}
 
 
 // Header
@@ -91,46 +143,30 @@
 // ------
 // Primary
 .modal-primary {
-  @include make-modal($bg: $modal-primary-bg, $border: $modal-primary-border, $text: $modal-primary-text);
+  @include modal-state($bg: $modal-primary-bg, $border: $modal-primary-border, $text: $modal-primary-text);
 }
 
 // Secondary
 .modal-secondary {
-  @include make-modal($bg: $modal-secondary-bg, $border: $modal-secondary-border, $text: $modal-secondary-text);
+  @include modal-state($bg: $modal-secondary-bg, $border: $modal-secondary-border, $text: $modal-secondary-text);
 }
 
 // Error
 .modal-error {
-  @include make-modal($bg: $modal-error-bg, $border: $modal-error-border, $text: $modal-error-text);
+  @include modal-state($bg: $modal-error-bg, $border: $modal-error-border, $text: $modal-error-text);
 }
 
 // Warning
 .modal-warning {
-  @include make-modal($bg: $modal-warning-bg, $border: $modal-warning-border, $text: $modal-warning-text);
+  @include modal-state($bg: $modal-warning-bg, $border: $modal-warning-border, $text: $modal-warning-text);
 }
 
 // Success
 .modal-success {
-  @include make-modal($bg: $modal-success-bg, $border: $modal-success-border, $text: $modal-success-text);
+  @include modal-state($bg: $modal-success-bg, $border: $modal-success-border, $text: $modal-success-text);
 }
 
 // Info
 .modal-info {
-  @include make-modal($bg: $modal-info-bg, $border: $modal-info-border, $text: $modal-info-text);
-}
-
-
-// Overlay
-// -------
-.modal-overlay {
-  @if $modal-overlay-bg-fallback != $modal-overlay-bg {
-    background: $modal-overlay-bg-fallback;
-  }
-  background: $modal-overlay-bg;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: $modal-overlay-z-index;
+  @include modal-state($bg: $modal-info-bg, $border: $modal-info-border, $text: $modal-info-text);
 }

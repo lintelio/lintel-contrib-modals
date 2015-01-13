@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../../dist/modals.css">
 
     <style>
-      .modal {
+      body:not(.flexbox) .modal {
         margin-bottom: 20px;
       }
     </style>
@@ -14,408 +14,581 @@
   <body class="pad">
 
     <div class="modal-overlay">
-    </div>
 
-    <div class="modal">
-      <form>
-        <div class="modal-header">
-          <h1 class="modal-title">
-            <a href="modal-title-link">Modal Title</a>
-          </h1>
+      <div class="modal-wrap">
+        <div class="modal">
+          <form>
+            <div class="modal-header">
+              <h1 class="modal-title">
+                <a href="modal-title-link">Modal Title</a>
+              </h1>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label class="form-label">
+                  Email
+                  <input class="form-control" type="text" placeholder="Label">
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  Password
+                  <input class="form-control" type="password" placeholder="Label">
+                </label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="btn-group float-right">
+                <button class="btn" type="button">
+                  OK
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="modal-body">
-          <div class="form-group">
-            <label class="form-label">
-              Email
-              <input class="form-control" type="text" placeholder="Label">
-            </label>
-          </div>
-          <div class="form-group">
-            <label class="form-label">
-              Password
-              <input class="form-control" type="password" placeholder="Label">
-            </label>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <div class="btn-group float-right">
-            <button class="btn" type="button">
-              OK
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
+      </div>
 
-    <!-- PRIMARY -->
-    <div class="modal modal-primary">
-      <form>
-        <div class="modal-header">
-          <div class="modal-header-actions">
-            <div class="btn-group">
-              <button class="btn" type="button">
-                Cancel
-              </button>
-              <button class="btn btn-primary" type="button">
-                Save
-              </button>
+      <!-- PRIMARY -->
+      <div class="modal-wrap">
+        <div class="modal modal-primary">
+          <form>
+            <div class="modal-header">
+              <div class="modal-header-actions">
+                <div class="btn-group">
+                  <button class="btn" type="button">
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div><!--
+              -->
+              <h1 class="modal-title">
+                <a href="modal-title-link">Modal Title</a>
+              </h1>
             </div>
-          </div><!--
-          -->
-          <h1 class="modal-title">
-            <a href="modal-title-link">Modal Title</a>
-          </h1>
-        </div>
-        <div class="modal-body">
-          <div class="form-group">
-            <label class="form-label">
-              Email
-              <input class="form-control" type="text" placeholder="Label">
-            </label>
-          </div>
-          <div class="form-group">
-            <label class="form-label">
-              Password
-              <input class="form-control" type="password" placeholder="Label">
-            </label>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <div class="modal-footer-actions">
-            <div class="btn-group">
-              <button class="btn" type="button">
-                Cancel
-              </button>
-              <button class="btn btn-primary" type="button">
-                Save
-              </button>
+            <div class="modal-body">
+              <div class="form-group">
+                <label class="form-label">
+                  Email
+                  <input class="form-control" type="text" placeholder="Label">
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  Password
+                  <input class="form-control" type="password" placeholder="Label">
+                </label>
+              </div>
             </div>
-          </div><!--
-          --><div class="btn-group">
-            <button class="btn" type="button">
-              Back
-            </button>
-          </div>
+            <div class="modal-footer">
+              <div class="modal-footer-actions">
+                <div class="btn-group">
+                  <button class="btn" type="button">
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div><!--
+              --><div class="btn-group">
+                <button class="btn" type="button">
+                  Back
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
+      </div>
 
-    <!-- SECONDARY -->
-    <div class="modal modal-secondary">
-      <form>
-        <div class="modal-header">
-          <div class="modal-header-actions">
-            <div class="btn-group">
-              <button class="btn" type="button">
-                Cancel
-              </button>
-              <button class="btn btn-primary" type="button">
-                Save
-              </button>
+      <!-- SECONDARY -->
+      <div class="modal-wrap">
+        <div class="modal modal-secondary">
+          <form>
+            <div class="modal-header">
+              <div class="modal-header-actions">
+                <div class="btn-group">
+                  <button class="btn" type="button">
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div><!--
+              -->
+              <h1 class="modal-title">
+                <a href="modal-title-link">Modal Title</a>
+              </h1>
             </div>
-          </div><!--
-          -->
-          <h1 class="modal-title">
-            <a href="modal-title-link">Modal Title</a>
-          </h1>
-        </div>
-        <div class="modal-body">
-          <div class="form-group">
-            <label class="form-label">
-              Email
-              <input class="form-control" type="text" placeholder="Label">
-            </label>
-          </div>
-          <div class="form-group">
-            <label class="form-label">
-              Password
-              <input class="form-control" type="password" placeholder="Label">
-            </label>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <div class="modal-footer-actions">
-            <div class="btn-group">
-              <button class="btn" type="button">
-                Cancel
-              </button>
-              <button class="btn btn-primary" type="button">
-                Save
-              </button>
+            <div class="modal-body">
+              <div class="form-group">
+                <label class="form-label">
+                  Email
+                  <input class="form-control" type="text" placeholder="Label">
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  Password
+                  <input class="form-control" type="password" placeholder="Label">
+                </label>
+              </div>
             </div>
-          </div><!--
-          --><div class="btn-group">
-            <button class="btn" type="button">
-              Back
-            </button>
-          </div>
+            <div class="modal-footer">
+              <div class="modal-footer-actions">
+                <div class="btn-group">
+                  <button class="btn" type="button">
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div><!--
+              --><div class="btn-group">
+                <button class="btn" type="button">
+                  Back
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
+      </div>
 
-    <!-- ERROR -->
-    <div class="modal modal-error">
-      <form>
-        <div class="modal-header">
-          <div class="modal-header-actions">
-            <div class="btn-group">
-              <button class="btn" type="button">
-                Cancel
-              </button>
-              <button class="btn btn-primary" type="button">
-                Save
-              </button>
+      <!-- ERROR -->
+      <div class="modal-wrap">
+        <div class="modal modal-error">
+          <form>
+            <div class="modal-header">
+              <div class="modal-header-actions">
+                <div class="btn-group">
+                  <button class="btn" type="button">
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div><!--
+              -->
+              <h1 class="modal-title">
+                <a href="modal-title-link">Modal Title</a>
+              </h1>
             </div>
-          </div><!--
-          -->
-          <h1 class="modal-title">
-            <a href="modal-title-link">Modal Title</a>
-          </h1>
-        </div>
-        <div class="modal-body">
-          <div class="form-group">
-            <label class="form-label">
-              Email
-              <input class="form-control" type="text" placeholder="Label">
-            </label>
-          </div>
-          <div class="form-group">
-            <label class="form-label">
-              Password
-              <input class="form-control" type="password" placeholder="Label">
-            </label>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <div class="modal-footer-actions">
-            <div class="btn-group">
-              <button class="btn" type="button">
-                Cancel
-              </button>
-              <button class="btn btn-primary" type="button">
-                Save
-              </button>
+            <div class="modal-body">
+              <div class="form-group">
+                <label class="form-label">
+                  Email
+                  <input class="form-control" type="text" placeholder="Label">
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  Password
+                  <input class="form-control" type="password" placeholder="Label">
+                </label>
+              </div>
             </div>
-          </div><!--
-          --><div class="btn-group">
-            <button class="btn" type="button">
-              Back
-            </button>
-          </div>
+            <div class="modal-footer">
+              <div class="modal-footer-actions">
+                <div class="btn-group">
+                  <button class="btn" type="button">
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div><!--
+              --><div class="btn-group">
+                <button class="btn" type="button">
+                  Back
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
+      </div>
 
-    <!-- WARNING -->
-    <div class="modal modal-warning">
-      <form>
-        <div class="modal-header">
-          <div class="modal-header-actions">
-            <div class="btn-group">
-              <button class="btn" type="button">
-                Cancel
-              </button>
-              <button class="btn btn-primary" type="button">
-                Save
-              </button>
+      <!-- WARNING -->
+      <div class="modal-wrap">
+        <div class="modal modal-warning">
+          <form>
+            <div class="modal-header">
+              <div class="modal-header-actions">
+                <div class="btn-group">
+                  <button class="btn" type="button">
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div><!--
+              -->
+              <h1 class="modal-title">
+                <a href="modal-title-link">Modal Title</a>
+              </h1>
             </div>
-          </div><!--
-          -->
-          <h1 class="modal-title">
-            <a href="modal-title-link">Modal Title</a>
-          </h1>
-        </div>
-        <div class="modal-body">
-          <div class="form-group">
-            <label class="form-label">
-              Email
-              <input class="form-control" type="text" placeholder="Label">
-            </label>
-          </div>
-          <div class="form-group">
-            <label class="form-label">
-              Password
-              <input class="form-control" type="password" placeholder="Label">
-            </label>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <div class="modal-footer-actions">
-            <div class="btn-group">
-              <button class="btn" type="button">
-                Cancel
-              </button>
-              <button class="btn btn-primary" type="button">
-                Save
-              </button>
+            <div class="modal-body">
+              <div class="form-group">
+                <label class="form-label">
+                  Email
+                  <input class="form-control" type="text" placeholder="Label">
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  Password
+                  <input class="form-control" type="password" placeholder="Label">
+                </label>
+              </div>
             </div>
-          </div><!--
-          --><div class="btn-group">
-            <button class="btn" type="button">
-              Back
-            </button>
-          </div>
+            <div class="modal-footer">
+              <div class="modal-footer-actions">
+                <div class="btn-group">
+                  <button class="btn" type="button">
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div><!--
+              --><div class="btn-group">
+                <button class="btn" type="button">
+                  Back
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
+      </div>
 
-    <!-- PRIMARY -->
-    <div class="modal modal-primary">
-      <form>
-        <div class="modal-header">
-          <div class="modal-header-actions">
-            <div class="btn-group">
-              <button class="btn" type="button">
-                Cancel
-              </button>
-              <button class="btn btn-primary" type="button">
-                Save
-              </button>
+      <!-- PRIMARY -->
+      <div class="modal-wrap">
+        <div class="modal modal-primary">
+          <form>
+            <div class="modal-header">
+              <div class="modal-header-actions">
+                <div class="btn-group">
+                  <button class="btn" type="button">
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div><!--
+              -->
+              <h1 class="modal-title">
+                <a href="modal-title-link">Modal Title</a>
+              </h1>
             </div>
-          </div><!--
-          -->
-          <h1 class="modal-title">
-            <a href="modal-title-link">Modal Title</a>
-          </h1>
-        </div>
-        <div class="modal-body">
-          <div class="form-group">
-            <label class="form-label">
-              Email
-              <input class="form-control" type="text" placeholder="Label">
-            </label>
-          </div>
-          <div class="form-group">
-            <label class="form-label">
-              Password
-              <input class="form-control" type="password" placeholder="Label">
-            </label>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <div class="modal-footer-actions">
-            <div class="btn-group">
-              <button class="btn" type="button">
-                Cancel
-              </button>
-              <button class="btn btn-primary" type="button">
-                Save
-              </button>
+            <div class="modal-body">
+              <div class="form-group">
+                <label class="form-label">
+                  Email
+                  <input class="form-control" type="text" placeholder="Label">
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  Password
+                  <input class="form-control" type="password" placeholder="Label">
+                </label>
+              </div>
             </div>
-          </div><!--
-          --><div class="btn-group">
-            <button class="btn" type="button">
-              Back
-            </button>
-          </div>
+            <div class="modal-footer">
+              <div class="modal-footer-actions">
+                <div class="btn-group">
+                  <button class="btn" type="button">
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div><!--
+              --><div class="btn-group">
+                <button class="btn" type="button">
+                  Back
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
+      </div>
 
-    <!-- SUCCESS -->
-    <div class="modal modal-success">
-      <form>
-        <div class="modal-header">
-          <div class="modal-header-actions">
-            <div class="btn-group">
-              <button class="btn" type="button">
-                Cancel
-              </button>
-              <button class="btn btn-primary" type="button">
-                Save
-              </button>
+      <!-- SUCCESS -->
+      <div class="modal-wrap">
+        <div class="modal modal-success">
+          <form>
+            <div class="modal-header">
+              <div class="modal-header-actions">
+                <div class="btn-group">
+                  <button class="btn" type="button">
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div><!--
+              -->
+              <h1 class="modal-title">
+                <a href="modal-title-link">Modal Title</a>
+              </h1>
             </div>
-          </div><!--
-          -->
-          <h1 class="modal-title">
-            <a href="modal-title-link">Modal Title</a>
-          </h1>
-        </div>
-        <div class="modal-body">
-          <div class="form-group">
-            <label class="form-label">
-              Email
-              <input class="form-control" type="text" placeholder="Label">
-            </label>
-          </div>
-          <div class="form-group">
-            <label class="form-label">
-              Password
-              <input class="form-control" type="password" placeholder="Label">
-            </label>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <div class="modal-footer-actions">
-            <div class="btn-group">
-              <button class="btn" type="button">
-                Cancel
-              </button>
-              <button class="btn btn-primary" type="button">
-                Save
-              </button>
+            <div class="modal-body">
+              <div class="form-group">
+                <label class="form-label">
+                  Email
+                  <input class="form-control" type="text" placeholder="Label">
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  Password
+                  <input class="form-control" type="password" placeholder="Label">
+                </label>
+              </div>
             </div>
-          </div><!--
-          --><div class="btn-group">
-            <button class="btn" type="button">
-              Back
-            </button>
-          </div>
+            <div class="modal-footer">
+              <div class="modal-footer-actions">
+                <div class="btn-group">
+                  <button class="btn" type="button">
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div><!--
+              --><div class="btn-group">
+                <button class="btn" type="button">
+                  Back
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
+      </div>
 
-    <!-- INFO -->
-    <div class="modal modal-info">
-      <form>
-        <div class="modal-header">
-          <div class="modal-header-actions">
-            <div class="btn-group">
+      <!-- INFO -->
+      <div class="modal-wrap">
+        <div class="modal modal-info">
+          <form>
+            <div class="modal-header">
+              <div class="modal-header-actions">
+                <div class="btn-group">
+                  <button class="btn" type="button">
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div><!--
+              -->
+              <h1 class="modal-title">
+                <a href="modal-title-link">Modal Title</a>
+              </h1>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label class="form-label">
+                  Email
+                  <input class="form-control" type="text" placeholder="Label">
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  Password
+                  <input class="form-control" type="password" placeholder="Label">
+                </label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="modal-footer-actions">
+                <div class="btn-group">
+                  <button class="btn" type="button">
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary" type="button">
+                    Save
+                  </button>
+                </div>
+              </div><!--
+              --><div class="btn-group">
+                <button class="btn" type="button">
+                  Back
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- SIZES -->
+      <div class="modal-wrap modal-xs">
+        <div class="modal modal-info">
+          <div class="modal-header">
+            <h1 class="modal-title">
+              <a href="modal-title-link">Extra Small</a>
+            </h1>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">
+                Email
+                <input class="form-control" type="text" placeholder="Label">
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="form-label">
+                Password
+                <input class="form-control" type="password" placeholder="Label">
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-group float-right">
               <button class="btn" type="button">
-                Cancel
-              </button>
-              <button class="btn btn-primary" type="button">
-                Save
+                OK
               </button>
             </div>
-          </div><!--
-          -->
-          <h1 class="modal-title">
-            <a href="modal-title-link">Modal Title</a>
-          </h1>
-        </div>
-        <div class="modal-body">
-          <div class="form-group">
-            <label class="form-label">
-              Email
-              <input class="form-control" type="text" placeholder="Label">
-            </label>
-          </div>
-          <div class="form-group">
-            <label class="form-label">
-              Password
-              <input class="form-control" type="password" placeholder="Label">
-            </label>
           </div>
         </div>
-        <div class="modal-footer">
-          <div class="modal-footer-actions">
-            <div class="btn-group">
+      </div>
+
+      <div class="modal-wrap modal-sm">
+        <div class="modal modal-info">
+          <div class="modal-header">
+            <h1 class="modal-title">
+              <a href="modal-title-link">Small</a>
+            </h1>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">
+                Email
+                <input class="form-control" type="text" placeholder="Label">
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="form-label">
+                Password
+                <input class="form-control" type="password" placeholder="Label">
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-group float-right">
               <button class="btn" type="button">
-                Cancel
-              </button>
-              <button class="btn btn-primary" type="button">
-                Save
+                OK
               </button>
             </div>
-          </div><!--
-          --><div class="btn-group">
-            <button class="btn" type="button">
-              Back
-            </button>
           </div>
         </div>
-      </form>
+      </div>
+
+      <div class="modal-wrap modal-lg">
+        <div class="modal modal-info">
+          <div class="modal-header">
+            <h1 class="modal-title">
+              <a href="modal-title-link">Large</a>
+            </h1>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">
+                Email
+                <input class="form-control" type="text" placeholder="Label">
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="form-label">
+                Password
+                <input class="form-control" type="password" placeholder="Label">
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-group float-right">
+              <button class="btn" type="button">
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-wrap modal-xl">
+        <div class="modal modal-info">
+          <div class="modal-header">
+            <h1 class="modal-title">
+              <a href="modal-title-link">Extra Large</a>
+            </h1>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">
+                Email
+                <input class="form-control" type="text" placeholder="Label">
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="form-label">
+                Password
+                <input class="form-control" type="password" placeholder="Label">
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-group float-right">
+              <button class="btn" type="button">
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-wrap modal-max">
+        <div class="modal modal-info">
+          <div class="modal-header">
+            <h1 class="modal-title">
+              <a href="modal-title-link">Max</a>
+            </h1>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">
+                Email
+                <input class="form-control" type="text" placeholder="Label">
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="form-label">
+                Password
+                <input class="form-control" type="password" placeholder="Label">
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-group float-right">
+              <button class="btn" type="button">
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </body>

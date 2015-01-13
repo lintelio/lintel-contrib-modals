@@ -207,6 +207,246 @@ module.exports = function (grunt) {
               height: 'all'
           }
         }
+      },
+      "flexbox-xs": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-flexbox.html',
+          savePath: '<%= lintel.test %>/tmp/flexbox/xs.png',
+          windowSize: {
+              width: 320,
+              height: 568
+          },
+          shotSize: {
+              width: 320,
+              height: 'all'
+          }
+        }
+      },
+      "flexbox-sm": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-flexbox.html',
+          savePath: '<%= lintel.test %>/tmp/flexbox/sm.png',
+          windowSize: {
+              width: 480,
+              height: 568
+          },
+          shotSize: {
+              width: 480,
+              height: 'all'
+          }
+        }
+      },
+      "flexbox-md": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-flexbox.html',
+          savePath: '<%= lintel.test %>/tmp/flexbox/md.png',
+          windowSize: {
+              width: 768,
+              height: 1024
+          },
+          shotSize: {
+              width: 768,
+              height: 'all'
+          }
+        }
+      },
+      "flexbox-lg": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-flexbox.html',
+          savePath: '<%= lintel.test %>/tmp/flexbox/lg.png',
+          windowSize: {
+              width: 1024,
+              height: 768
+          },
+          shotSize: {
+              width: 1024,
+              height: 'all'
+          }
+        }
+      },
+      "flexbox-xl": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-flexbox.html',
+          savePath: '<%= lintel.test %>/tmp/flexbox/xl.png',
+          windowSize: {
+              width: 1280,
+              height: 800
+          },
+          shotSize: {
+              width: 1280,
+              height: 'all'
+          }
+        }
+      },
+      "flexbox-2xl": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-flexbox.html',
+          savePath: '<%= lintel.test %>/tmp/flexbox/2xl.png',
+          windowSize: {
+              width: 1440,
+              height: 900
+          },
+          shotSize: {
+              width: 1440,
+              height: 'all'
+          }
+        }
+      },
+      "flexbox-3xl": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-flexbox.html',
+          savePath: '<%= lintel.test %>/tmp/flexbox/3xl.png',
+          windowSize: {
+              width: 1680,
+              height: 1050
+          },
+          shotSize: {
+              width: 1680,
+              height: 'all'
+          }
+        }
+      },
+      "flexbox-max": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-flexbox.html',
+          savePath: '<%= lintel.test %>/tmp/flexbox/max.png',
+          windowSize: {
+              width: 1920,
+              height: 1080
+          },
+          shotSize: {
+              width: 1920,
+              height: 'all'
+          }
+        }
+      },
+      "one-xs": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-one.html',
+          savePath: '<%= lintel.test %>/tmp/one/xs.png',
+          windowSize: {
+              width: 320,
+              height: 568
+          },
+          shotSize: {
+              width: 320,
+              height: 'all'
+          }
+        }
+      },
+      "one-sm": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-one.html',
+          savePath: '<%= lintel.test %>/tmp/one/sm.png',
+          windowSize: {
+              width: 480,
+              height: 568
+          },
+          shotSize: {
+              width: 480,
+              height: 'all'
+          }
+        }
+      },
+      "one-md": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-one.html',
+          savePath: '<%= lintel.test %>/tmp/one/md.png',
+          windowSize: {
+              width: 768,
+              height: 1024
+          },
+          shotSize: {
+              width: 768,
+              height: 'all'
+          }
+        }
+      },
+      "one-lg": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-one.html',
+          savePath: '<%= lintel.test %>/tmp/one/lg.png',
+          windowSize: {
+              width: 1024,
+              height: 768
+          },
+          shotSize: {
+              width: 1024,
+              height: 'all'
+          }
+        }
+      },
+      "one-xl": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-one.html',
+          savePath: '<%= lintel.test %>/tmp/one/xl.png',
+          windowSize: {
+              width: 1280,
+              height: 800
+          },
+          shotSize: {
+              width: 1280,
+              height: 'all'
+          }
+        }
+      },
+      "one-2xl": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-one.html',
+          savePath: '<%= lintel.test %>/tmp/one/2xl.png',
+          windowSize: {
+              width: 1440,
+              height: 900
+          },
+          shotSize: {
+              width: 1440,
+              height: 'all'
+          }
+        }
+      },
+      "one-3xl": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-one.html',
+          savePath: '<%= lintel.test %>/tmp/one/3xl.png',
+          windowSize: {
+              width: 1680,
+              height: 1050
+          },
+          shotSize: {
+              width: 1680,
+              height: 'all'
+          }
+        }
+      },
+      "one-max": {
+        options: {
+          siteType: 'url',
+          site: 'http://localhost:4554/modals-one.html',
+          savePath: '<%= lintel.test %>/tmp/one/max.png',
+          windowSize: {
+              width: 1920,
+              height: 1080
+          },
+          shotSize: {
+              width: 1920,
+              height: 'all'
+          }
+        }
       }
     },
 
