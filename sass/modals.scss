@@ -12,6 +12,7 @@
     background: $modal-overlay-bg-fallback;
   }
   background: $modal-overlay-bg;
+  visibility: hidden;
   padding: $modal-overlay-padding-y $modal-overlay-padding-x;
   overflow-y: auto;
   position: fixed;
@@ -20,6 +21,18 @@
   left: 0;
   right: 0;
   z-index: $modal-z-index;
+
+  @if $modal-animate != 0 {
+    opacity: 0;
+    transition: opacity $animate-fast ease-in-out;
+  }
+
+  &.open {
+    @if $modal-animate != 0 {
+      opacity: 1;
+    }
+    visibility: visible;
+  }
 }
 
 
@@ -127,7 +140,8 @@
   padding: $modal-close-padding-y $modal-close-padding-x;
   transition: opacity $animate-fast ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 1;
   }
 

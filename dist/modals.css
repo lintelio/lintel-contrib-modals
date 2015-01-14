@@ -1,6 +1,7 @@
 .modal-overlay {
   background: #333;
   background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
   padding: 20px 20px;
   overflow-y: auto;
   position: fixed;
@@ -8,7 +9,12 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1400; }
+  z-index: 1400;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out; }
+  .modal-overlay.open {
+    opacity: 1;
+    visibility: visible; }
 
 body.flexbox .modal-overlay {
   display: -webkit-flex;
@@ -107,7 +113,7 @@ body.flexbox .modal-overlay {
   margin: 0;
   padding: 0 0;
   transition: opacity 0.4s ease-in-out; }
-  .modal-close:hover {
+  .modal-close:hover, .modal-close:focus {
     opacity: 1; }
   .modal-header-actions .modal-close, .modal-footer-actions .modal-close {
     display: inline-block;
