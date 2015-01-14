@@ -106,13 +106,35 @@
 
 .modal-title {
   display: inline-block;
-  font-size: $font-size-h4;
+  font-size: $modal-title-font-size;
   margin: 0;
   vertical-align: middle; // line up with .btns
 
   > a {
     color: inherit;
     text-decoration: none;
+  }
+}
+
+.modal-close {
+  background: none;
+  border: 0;
+  font-size: $modal-title-font-size;
+  line-height: 1;
+  float: right;
+  opacity: $modal-close-opacity;
+  margin: 0;
+  padding: $modal-close-padding-y $modal-close-padding-x;
+  transition: opacity $animate-fast ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .modal-header-actions & {
+    display: inline-block;
+    float: none;
+    margin-left: $cushion-x-md;
   }
 }
 

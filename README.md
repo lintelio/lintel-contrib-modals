@@ -215,6 +215,28 @@ NOTE: There should be no whitespace after `.modal-header-actions`. See [Fighting
 </div>
 ```
 
+#### Modal Header with Close Button
+```html
+<div class="modal-header">
+  <button type="button" class="modal-close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <h1 class="modal-title">
+    <a href="modal-title-link">Modal Link Title</a>
+  </h1>
+</div>
+```
+
+#### Modal Header with Close Button in Right Side Actions
+```html
+<div class="modal-header">
+  <div class="modal-header-actions">
+    <button type="button" class="modal-close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  </div><!--
+  --><h1 class="modal-title">
+    <a href="modal-title-link">Modal Link Title</a>
+  </h1>
+</div>
+```
+
 #### Modal Body
 ```html
 <div class="modal-body">...</div>

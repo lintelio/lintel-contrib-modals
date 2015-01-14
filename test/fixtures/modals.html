@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="../../bower_components/lintel/dist/lintel.css">
     <link rel="stylesheet" href="../../bower_components/lintel-contrib-buttons/dist/buttons.css">
     <link rel="stylesheet" href="../../dist/modals.css">
-
     <style>
       body:not(.flexbox) .modal {
         margin-bottom: 20px;
@@ -19,6 +18,7 @@
         <div class="modal">
           <form>
             <div class="modal-header">
+              <button type="button" class="modal-close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h1 class="modal-title">
                 <a href="modal-title-link">Modal Title</a>
               </h1>
@@ -44,6 +44,22 @@
                 </button>
               </div>
             </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-wrap">
+        <div class="modal">
+          <form>
+            <div class="modal-header">
+              <div class="modal-header-actions">
+                <button type="button" class="modal-close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div><!--
+              --><h1 class="modal-title">
+                <a href="modal-title-link">Modal Title</a>
+              </h1>
+            </div>
+            <div class="modal-body">Hi</div>
           </form>
         </div>
       </div>
