@@ -16,9 +16,9 @@
 
     <button type="button" data-target="#modal" data-toggle="modal">Show Modal</button>
 
-    <div class="modal-overlay" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-      <div class="modal-wrap">
-        <div class="modal">
+    <div id="modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal-container">
+        <div class="modal-dialog">
           <form>
             <div class="modal-header">
               <button type="button" class="modal-close" data-toggle="modal-close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -51,22 +51,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-      // $('#trigger').click(function(event) {
-      //   $('.modal-overlay').modal('show', this);
-      // });
-
-      // $('.modal-close').click(function(event) {
-      //   $('.modal-overlay').modal('hide', this);
-      // });
-
-      // $('#modal').on('show.lt.modal', function(e) {
-      //   console.log('=========');
-      //   console.log(e);
-      //   console.log('=========');
-      // });
-    </script>
 
   </body>
 </html>

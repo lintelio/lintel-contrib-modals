@@ -5,10 +5,11 @@
     <link rel="stylesheet" href="../../bower_components/lintel-contrib-buttons/dist/buttons.css">
     <link rel="stylesheet" href="../../dist/modals.css">
     <style>
-      body:not(.flexbox) .modal {
+      body:not(.flexbox) .modal-dialog {
         margin-bottom: 20px;
+        position
       }
-      .modal-overlay {
+      .modal {
         opacity: 1;
         visibility: visible;
       }
@@ -16,10 +17,10 @@
   </head>
   <body class="pad">
 
-    <div class="modal-overlay">
+    <div class="modal">
 
-      <div class="modal-wrap">
-        <div class="modal">
+      <div class="modal-container">
+        <div class="modal-dialog">
           <form>
             <div class="modal-header">
               <button type="button" class="modal-close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -52,8 +53,8 @@
         </div>
       </div>
 
-      <div class="modal-wrap">
-        <div class="modal">
+      <div class="modal-container">
+        <div class="modal-dialog">
           <form>
             <div class="modal-header">
               <div class="modal-header-actions">
@@ -69,8 +70,8 @@
       </div>
 
       <!-- PRIMARY -->
-      <div class="modal-wrap">
-        <div class="modal modal-primary">
+      <div class="modal-container">
+        <div class="modal-dialog modal-primary">
           <form>
             <div class="modal-header">
               <div class="modal-header-actions">
@@ -124,8 +125,8 @@
       </div>
 
       <!-- SECONDARY -->
-      <div class="modal-wrap">
-        <div class="modal modal-secondary">
+      <div class="modal-container">
+        <div class="modal-dialog modal-secondary">
           <form>
             <div class="modal-header">
               <div class="modal-header-actions">
@@ -179,8 +180,8 @@
       </div>
 
       <!-- ERROR -->
-      <div class="modal-wrap">
-        <div class="modal modal-error">
+      <div class="modal-container">
+        <div class="modal-dialog modal-error">
           <form>
             <div class="modal-header">
               <div class="modal-header-actions">
@@ -234,8 +235,8 @@
       </div>
 
       <!-- WARNING -->
-      <div class="modal-wrap">
-        <div class="modal modal-warning">
+      <div class="modal-container">
+        <div class="modal-dialog modal-warning">
           <form>
             <div class="modal-header">
               <div class="modal-header-actions">
@@ -289,8 +290,8 @@
       </div>
 
       <!-- PRIMARY -->
-      <div class="modal-wrap">
-        <div class="modal modal-primary">
+      <div class="modal-container">
+        <div class="modal-dialog modal-primary">
           <form>
             <div class="modal-header">
               <div class="modal-header-actions">
@@ -344,8 +345,8 @@
       </div>
 
       <!-- SUCCESS -->
-      <div class="modal-wrap">
-        <div class="modal modal-success">
+      <div class="modal-container">
+        <div class="modal-dialog modal-success">
           <form>
             <div class="modal-header">
               <div class="modal-header-actions">
@@ -399,8 +400,8 @@
       </div>
 
       <!-- INFO -->
-      <div class="modal-wrap">
-        <div class="modal modal-info">
+      <div class="modal-container">
+        <div class="modal-dialog modal-info">
           <form>
             <div class="modal-header">
               <div class="modal-header-actions">
@@ -454,8 +455,8 @@
       </div>
 
       <!-- SIZES -->
-      <div class="modal-wrap modal-xs">
-        <div class="modal modal-info">
+      <div class="modal-container modal-xs">
+        <div class="modal-dialog modal-info">
           <div class="modal-header">
             <h1 class="modal-title">
               <a href="modal-title-link">Extra Small</a>
@@ -485,8 +486,8 @@
         </div>
       </div>
 
-      <div class="modal-wrap modal-sm">
-        <div class="modal modal-info">
+      <div class="modal-container modal-sm">
+        <div class="modal-dialog modal-info">
           <div class="modal-header">
             <h1 class="modal-title">
               <a href="modal-title-link">Small</a>
@@ -516,8 +517,8 @@
         </div>
       </div>
 
-      <div class="modal-wrap modal-lg">
-        <div class="modal modal-info">
+      <div class="modal-container modal-lg">
+        <div class="modal-dialog modal-info">
           <div class="modal-header">
             <h1 class="modal-title">
               <a href="modal-title-link">Large</a>
@@ -547,8 +548,8 @@
         </div>
       </div>
 
-      <div class="modal-wrap modal-xl">
-        <div class="modal modal-info">
+      <div class="modal-container modal-xl">
+        <div class="modal-dialog modal-info">
           <div class="modal-header">
             <h1 class="modal-title">
               <a href="modal-title-link">Extra Large</a>
@@ -578,8 +579,8 @@
         </div>
       </div>
 
-      <div class="modal-wrap modal-max">
-        <div class="modal modal-info">
+      <div class="modal-container modal-max">
+        <div class="modal-dialog modal-info">
           <div class="modal-header">
             <h1 class="modal-title">
               <a href="modal-title-link">Max</a>

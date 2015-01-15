@@ -136,9 +136,9 @@ Change this mixin to customize what each state does.
 
 #### Modal
 ```html
-<div class="modal-overlay">
-  <div class="modal-wrap">
-    <div class="modal">
+<div class="modal">
+  <div class="modal-container">
+    <div class="modal-dialog">
       <form>
         <div class="modal-header">
           <h1 class="modal-title">
@@ -278,22 +278,22 @@ If the body has the class `.flexbox`, the modal will be centered using flexbox. 
 
 ```html
 <body class="flexbox">
-  <div class="modal-overlay">...</div>
+  <div class="modal">...</div>
 </body>
 ```
 
 #### Sizes
 ```html
-<div class="modal-wrap modal-xs">...</div>
-<div class="modal-wrap modal-sm">...</div>
-<div class="modal-wrap modal-lg">...</div>
-<div class="modal-wrap modal-xl">...</div>
-<div class="modal-wrap modal-max">...</div>
+<div class="modal-container modal-xs">...</div>
+<div class="modal-container modal-sm">...</div>
+<div class="modal-container modal-lg">...</div>
+<div class="modal-container modal-xl">...</div>
+<div class="modal-container modal-max">...</div>
 ```
 
 #### Full Height and Width
 ```html
-<div class="modal-wrap modal-max modal-full">...</div>
+<div class="modal-container modal-max modal-full">...</div>
 ```
 
 

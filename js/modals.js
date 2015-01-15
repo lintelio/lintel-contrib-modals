@@ -88,7 +88,9 @@
   Modal.prototype.optionsEscape = function() {
     if (this.visible && this.options.esc) {
       this.$modal.on('keydown.close.lt.modal', $.proxy(function(e) {
-        e.which === 27 && this.hide();
+        if (e.which === 27) {
+          this.hide();
+        }
       }, this));
     } else {
       this.$modal.off('keydown.close.lt.modal');

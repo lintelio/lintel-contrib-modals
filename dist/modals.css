@@ -1,4 +1,4 @@
-.modal-overlay {
+.modal {
   background: #333;
   background: rgba(0, 0, 0, 0.5);
   visibility: hidden;
@@ -12,11 +12,11 @@
   z-index: 1400;
   opacity: 0;
   transition: opacity 0.4s ease-in-out; }
-  .modal-overlay.open {
+  .modal.open {
     opacity: 1;
     visibility: visible; }
 
-body.flexbox .modal-overlay {
+body.flexbox .modal {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -27,19 +27,12 @@ body.flexbox .modal-overlay {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.modal-wrap {
+.modal-container {
   margin-left: auto;
   margin-right: auto;
   max-height: 100%;
   max-width: 600px;
   width: 100%; }
-
-.modal {
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.6);
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-  position: relative; }
 
 .modal-xs {
   max-width: 400px; }
@@ -70,6 +63,13 @@ body.flexbox .modal-overlay {
   .modal-full > .modal {
     min-height: 100%;
     width: 100%; }
+
+.modal-dialog {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  position: relative; }
 
 .modal-header {
   border-bottom: 1px solid #ececec;

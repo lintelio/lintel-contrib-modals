@@ -9,7 +9,7 @@
       body:not(.flexbox) .modal {
         margin-bottom: 20px;
       }
-      .modal-overlay {
+      .modal {
         opacity: 1;
         visibility: visible;
       }
@@ -17,12 +17,12 @@
   </head>
   <body class="pad">
 
-    <div class="modal-overlay">
-      <div class="modal-wrap">
-        <div class="modal">
+    <div class="modal" tabindex="-1" aria-labelledby="exampleModalTitle" role="dialog">
+      <div class="modal-container">
+        <div class="modal-dialog">
           <form>
             <div class="modal-header">
-              <h1 class="modal-title">
+              <h1 class="modal-title" id="exampleModalTitle">
                 <a href="modal-title-link">Modal Title</a>
               </h1>
             </div>
