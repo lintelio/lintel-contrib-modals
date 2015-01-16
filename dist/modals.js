@@ -34,6 +34,9 @@
     // Focus modal
     this.modalFocus();
 
+    // Callback
+    this.options.onShow.call(this, this.$modal, this.lastTrigger);
+
     // Shown event
     var shownEvent = $.Event('shown.lt.modal', {
       relatedTarget: relatedTarget
@@ -66,6 +69,9 @@
 
     // Restore focus
     this.restoreFocus();
+
+    // Callback
+    this.options.onHide.call(this, this.$modal, this.lastTrigger);
 
     // Hidden event
     var hiddenEvent = $.Event('hidden.lt.modal', {
@@ -115,13 +121,12 @@
       } else if (settings.show) {
         data.show(relatedTarget);
       }
-
-      settings.callback.call($this);
     });
   }
 
   Plugin.defaults = {
-    callback: function() {},
+    onShow: function() {},
+    onHide: function() {},
     esc: true,
     show: true
   };

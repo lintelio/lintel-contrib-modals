@@ -12,7 +12,6 @@
     background: $modal-overlay-bg-fallback;
   }
   background: $modal-overlay-bg;
-  visibility: hidden;
   padding: $modal-overlay-padding-y $modal-overlay-padding-x;
   overflow-y: auto;
   position: fixed;
@@ -20,6 +19,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  visibility: hidden;
   z-index: $modal-z-index;
 
   @if $modal-animate != 0 {

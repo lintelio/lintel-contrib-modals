@@ -12,7 +12,7 @@ $modal-box-shadow:          $box-shadow-dark !default;
 $modal-z-index:             $z-index-3xl !default;
 
 $modal-center-y:            true !default;
-$modal-animate:             $animate-fast;
+$modal-animate:             $animate-fast !default;
 
 // Header
 $modal-header-padding-y:    $modal-padding-y !default;
@@ -20,11 +20,11 @@ $modal-header-padding-x:    $modal-padding-x !default;
 
 $modal-header-border:       $border-base !default;
 
-$modal-title-font-size:     $font-size-h4;
+$modal-title-font-size:     $font-size-h4 !default;
 
-$modal-close-opacity:       0.4;
-$modal-close-padding-y:     0;
-$modal-close-padding-x:     0;
+$modal-close-opacity:       0.4 !default;
+$modal-close-padding-y:     0 !default;
+$modal-close-padding-x:     0 !default;
 
 // Body
 $modal-body-padding-y:      $modal-padding-y !default;

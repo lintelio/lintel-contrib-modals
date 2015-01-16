@@ -131,6 +131,52 @@ Change this mixin to customize what each state does.
 }
 ```
 
+## JavaScript
+You can call a modal directly using the `.modal()` jQuery plugin.
+
+Otherwise, you can use `data-toggle="modal"` combined with `data-target="#selector"` syntax.
+
+
+### Options
+
+Name      | Type                           | Default             | Description
+--------- | ------------------------------ | ------------------- | -----------
+onShow    | function                       |                     | Callback function to execute every time modal is shown.
+onHide    | function                       |                     | Callback function to execute every time modal is hidden.
+esc       | boolean                        | true                | Close modal on escape key.
+show      | boolean                        | true                | Show modal when invocking `.modal()`
+
+
+### Events
+
+Event                | Description
+-------------------- | ------------------------------
+show.lt.modal        | Fires immediately before modal is shown. Can prevent modal from showing here. Trigger button (if provided) can be accessed under `relatedTarget`.
+shown.lt.modal       | Fires immediately after modal is shown.
+hide.lt.modal        | Fires immediately before modal is hidden. Can prevent modal from hiding here.
+hidden.lt.modal      | Fires immediately after modal is hidden.
+
+
+### Related Target
+In order for events and onShow/onHide callbacks to have access to the triggering element(ie. button), provide a second argument to the `.modal()` function. See example for onShow/onHide below.
+
+
+### onShow / onHide
+NOTE: `button` parameter will only by available if the button element is provided as the second argument to `.modal()`
+
+```js
+$('#myButton').click(function(e) {
+  $('#myModal').modal({
+    onShow: function(modal, button) {
+      console.log('onShow', this, modal, button);
+    },
+    onHide: function(modal, button) {
+      console.log('onHide', this, modal, button);
+    },
+    esc: false
+  }, this); // this == #myButton
+});
+```
 
 ## Examples
 

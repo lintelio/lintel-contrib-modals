@@ -1,7 +1,6 @@
 .modal {
   background: #333;
   background: rgba(0, 0, 0, 0.5);
-  visibility: hidden;
   padding: 20px 20px;
   overflow-y: auto;
   position: fixed;
@@ -9,6 +8,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  visibility: hidden;
   z-index: 1400;
   opacity: 0;
   transition: opacity 0.4s ease-in-out; }
