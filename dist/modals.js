@@ -22,8 +22,10 @@
 
     // Open Modal
     this.visible = true;
-    this.$modal.addClass('open');
     $(document.body).addClass('modal-open');
+    this.$modal
+      .addClass('open')
+      .attr('aria-hidden', 'false');
 
     // Register close buttons
     this.$modal.on('click.close.lt.modal', '[data-toggle="modal-close"]', $.proxy(this.hide, this));
@@ -58,8 +60,10 @@
 
     // Hide modal
     this.visible = false;
-    this.$modal.removeClass('open');
     $(document.body).removeClass('modal-open');
+    this.$modal
+      .removeClass('open')
+      .attr('aria-hidden', 'true');
 
     // Unregister close button listeners
     this.$modal.off('click.close.lt.modal');
