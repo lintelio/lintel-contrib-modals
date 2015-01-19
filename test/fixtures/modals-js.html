@@ -14,7 +14,7 @@
   </head>
   <body class="pad">
 
-    <button type="button" data-target="#modal">Show Modal</button>
+    <button id="button" type="button" data-target="#modal">Show Modal</button>
 
     <div id="modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
       <div class="modal-container">
@@ -56,10 +56,10 @@
       $('[data-target="#modal"]').click(function() {
         $('#modal').modal({
           onShow: function(modal, button) {
-            console.log('onShow', modal, button);
+            console.log('onShow', this, modal, button);
           },
           onHide: function(modal, button) {
-            console.log('onHide', modal, button);
+            console.log('onHide', this, modal, button);
           },
         }, this);
       });

@@ -9,7 +9,7 @@
 
   Modal.prototype.show = function(relatedTarget) {
     if (this.visible) { return; }
-    this.lastTrigger = relatedTarget ? relatedTarget : null;
+    this.$trigger = relatedTarget ? $(relatedTarget) : null;
 
     // Show event
     var showEvent = $.Event('show.lt.modal', {
@@ -37,7 +37,7 @@
     this.modalFocus();
 
     // Callback
-    this.options.onShow.call(this, this.$modal, this.lastTrigger);
+    this.options.onShow.call(this, this.$modal, this.$trigger);
 
     // Shown event
     var shownEvent = $.Event('shown.lt.modal', {
@@ -51,7 +51,7 @@
 
     // Hide event
     var hideEvent = $.Event('hide.lt.modal', {
-      relatedTarget: relatedTarget
+      relatedTarget: (this.$trigger && this.$trigger[0]) ? this.$trigger[0] : relatedTarget
     });
     this.$modal.trigger(hideEvent);
 
@@ -75,24 +75,13 @@
     this.restoreFocus();
 
     // Callback
-    this.options.onHide.call(this, this.$modal, this.lastTrigger);
+    this.options.onHide.call(this, this.$modal);
 
     // Hidden event
     var hiddenEvent = $.Event('hidden.lt.modal', {
-      relatedTarget: relatedTarget
+      relatedTarget: (this.$trigger && this.$trigger[0]) ? this.$trigger[0] : relatedTarget
     });
     this.$modal.trigger(hiddenEvent);
-  };
-
-  Modal.prototype.restoreFocus = function() {
-    if (this.lastTrigger) {
-      $(this.lastTrigger).focus();
-      this.lastTrigger = null;
-    }
-  };
-
-  Modal.prototype.modalFocus = function() {
-    this.$modal.focus();
   };
 
   Modal.prototype.optionsEscape = function() {
@@ -107,17 +96,28 @@
     }
   };
 
+  Modal.prototype.modalFocus = function() {
+    this.$modal.focus();
+  };
+
+  Modal.prototype.restoreFocus = function() {
+    if (this.$trigger) {
+      this.$trigger.focus();
+      this.$trigger = null;
+    }
+  };
+
   // Define jQuery plugin
   function Plugin(method, relatedTarget) {
     return this.each(function() {
-      var $this = $(this);
-      var settings = $.extend({}, Plugin.defaults, $this.data(), typeof method === 'object' && method);
+      var $modal = $(this);
+      var settings = $.extend({}, Plugin.defaults, $modal.data(), typeof method === 'object' && method);
 
-      var data = $this.data('lt.modal');
+      var data = $modal.data('lt.modal');
 
       if (!data) {
         data = new Modal(this, settings);
-        $this.data('lt.modal', data);
+        $modal.data('lt.modal', data);
       }
 
       if (typeof method === 'string') {
@@ -138,15 +138,15 @@
   $.fn.modal = Plugin;
 
   $(document).on('click.lt.modal.data-attr', '[data-toggle="modal"]', function (e) {
-    var $this = $(this);
-    var $target = $($this.attr('data-target')) || $($this.attr('href'));
-    var options = $target.data('lt.modal') ? 'show' : $.extend($target.data(), $this.data());
+    var $trigger = $(this);
+    var $target = $($trigger.attr('data-target')) || $($trigger.attr('href'));
+    var options = $target.data('lt.modal') ? 'show' : $.extend($target.data(), $trigger.data());
 
-    if ($this.is('a')) {
+    if ($trigger.is('a')) {
       e.preventDefault();
     }
 
-    Plugin.call($target, options, this);
+    Plugin.call($target, options, $trigger[0]);
   });
 
 })(jQuery);

@@ -132,10 +132,6 @@ Change this mixin to customize what each state does.
 ```
 
 ## JavaScript
-You can call a modal directly using the `.modal()` jQuery plugin.
-
-Otherwise, you can use `data-toggle="modal"` combined with `data-target="#selector"` syntax.
-
 
 ### Options
 
@@ -144,7 +140,15 @@ Name      | Type                           | Default             | Description
 onShow    | function                       |                     | Callback function to execute every time modal is shown.
 onHide    | function                       |                     | Callback function to execute every time modal is hidden.
 esc       | boolean                        | true                | Close modal on escape key.
-show      | boolean                        | true                | Show modal when invocking `.modal()`
+show      | boolean                        | true                | Show modal when invoking `.modal()`
+
+
+### Methods
+
+Name      | Parameters               | Description
+--------- | ------------------------ | -----------
+show      | (options, relatedTarget) | Show modal. Related target is the trigger that opened the modal. Focus will return to this element when modal hides.
+hide      |                          | Hide modal.
 
 
 ### Events
@@ -157,26 +161,48 @@ hide.lt.modal        | Fires immediately before modal is hidden. Can prevent mod
 hidden.lt.modal      | Fires immediately after modal is hidden.
 
 
-### Related Target
-In order for events and onShow/onHide callbacks to have access to the triggering element(ie. button), provide a second argument to the `.modal()` function. See example for onShow/onHide below.
+### Data-attr
+Add `data-toggle="modal"` and `data-target="#selector"` to a button/element.
+You can add additional options as data-attributes.
+
+```html
+<button type="button" data-toggle="modal" data-target="#myModal">
+  Modal
+</button>
+<div id="myModal" class="modal">
+...
+</div>
+```
 
 
-### onShow / onHide
-NOTE: `button` parameter will only by available if the button element is provided as the second argument to `.modal()`
+### jQuery
+Call the jQuery plugin on the modal, passing in any options and the related target (button).
+
+In order for events and onShow/onHide callbacks to have access to the triggering element(ie. button), provide the related target. See example for onShow/onHide below.
 
 ```js
+var options = {
+  onShow: function(modal, button) {
+    console.log('onShow', this, modal, button);
+  },
+  onHide: function(modal, button) {
+    console.log('onHide', this, modal, button);
+  },
+  esc: false
+};
+
 $('#myButton').click(function(e) {
-  $('#myModal').modal({
-    onShow: function(modal, button) {
-      console.log('onShow', this, modal, button);
-    },
-    onHide: function(modal, button) {
-      console.log('onHide', this, modal, button);
-    },
-    esc: false
-  }, this); // this == #myButton
+  $('#myModal').modal(options, this); // this == #myButton
 });
 ```
+
+Alternatively, you can use the default options:
+```js
+$('#myButton').click(function(e) {
+  $('#myModal').modal('show', this); // this == #myButton
+});
+```
+
 
 ## Examples
 
